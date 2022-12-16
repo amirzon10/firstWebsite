@@ -1,0 +1,267 @@
+/* general page styling starts here */
+/*Amir did this*/
+body {
+  background-image: url(/images/homepage/bgPage.jpg);
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.font1 {
+  font-family: "Dancing Script", cursive;
+}
+.font2 {
+  font-family: "Rajdhani", sans-serif;
+}
+.font3 {
+  font-family: "IBM Plex Serif", serif;
+}
+#logo {
+  width: 100px;
+  height: 50;
+}
+/*Prathibha did this*/
+.button-grow {
+  background-color: transparent;
+  padding: 0 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-grow:hover {
+  transform: scale(1.1);
+}
+/*Amir did this*/
+/* homepage styling */
+.img {
+  width: 420px;
+  height: 50;
+}
+
+/* study at home page styling*/
+
+/*Prathibha did this*/
+#image {
+  width: 150px;
+  height: auto;
+}
+
+/* study online styling */
+#image2 {
+  width: 300px;
+  height: auto;
+}
+
+/*survey styling*/
+
+
+#detailsform {
+  font-family: "IBM Plex Serif", serif;
+}
+form {
+  width: 700px;
+  margin: auto;
+  padding: 10px;
+  background-color: rgb(216, 218, 231);
+  border: 1px solid rgb(243, 233, 233);
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  background-color: #1881d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #089fb0;
+}
+
+/* styling for the game starts here */
+
+/*Amir did this*/
+#game {
+  /* stablising the room occupied by the game window */
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  /* adjust student picture (resize image to the predeterminated values)*/
+  background-size: 600px 200px;
+}
+
+.bg1 {
+  background-image: url(/images/game/vg_background1.jpg);
+}
+
+.bg2 {
+  background-image: url(/images/game/vg_background2.jpg);
+}
+.bg3 {
+  background-image: url(/images/game/vg_background3.jpg);
+}
+
+#student {
+  width: 50px;
+  height: 50px;
+  background-image: url(images/game/vg_character.png);
+  /* adjust student picture (resize image to the predeterminated values)*/
+  background-size: 50px 50px;
+
+  position: relative;
+  /*setting values for the animation of the character */
+  top: 150px;
+}
+
+.jump {
+  /* animation jump assing to a class to use it when needed*/
+  animation: jump 0.6s linear;
+}
+
+/*creating the animation with the rule keyframes*/
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  10% {
+    top: 136px;
+  }
+  20% {
+    top: 122px;
+  }
+  30% {
+    top: 108px;
+  }
+  40% {
+    top: 94px;
+  }
+  50% {
+    top: 80px;
+  }
+  60% {
+    top: 94px;
+  }
+  70% {
+    top: 108px;
+  }
+  80% {
+    top: 122px;
+  }
+  90% {
+    top: 136px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+#alcohol {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 565px;
+
+  background-image: url(images/game/obstacle.png);
+  background-size: 20px 40px;
+}
+/* create several classes to increase difficulty*/
+.alcoholActive4 {
+  /* animation jump assing to a class to use it when needed*/
+  animation: alcohol 0.6s infinite linear;
+}
+.alcoholActive3 {
+  /* animation jump assing to a class to use it when needed*/
+  animation: alcohol 0.9s infinite linear;
+}
+.alcoholActive2 {
+  /* animation jump assing to a class to use it when needed*/
+  animation: alcohol 1.5s infinite linear;
+}
+.alcoholActive {
+  /* animation jump assing to a class to use it when needed*/
+  animation: alcohol 2s infinite linear;
+}
+
+/*make the obstacle change its position to create movement*/
+@keyframes alcohol {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -30px;
+  }
+}
+
+#score {
+  height: auto;
+  width: auto;
+  position: relative;
+  top: -80px;
+  left: 500px;
+}
+
+#gameOver {
+  font-size: 50px;
+  position: relative;
+  left: 175px;
+  top: -50px;
+  width: auto;
+  color: #525252;
+  display: none;
+}
+
+#live {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -100px;
+  left: 20px;
+
+  background-image: url(images/game/lives.png);
+  background-size: 16px 16px;
+}
+
+/* delete this */
+
+@media (max-width: 440px) {
+  #game {
+    display: none;
+  }
+  #openBtn {
+    display: none;
+  }
+  .img {
+    width: 200px;
+  }
+}
+
+@media (min-width: 441px) {
+  #alcohol {
+    left: 300px;
+  }
+  #score {
+    left: 240px;
+  }
+}
+
+@media (min-width: 540px) {
+  #alcohol {
+    left: 360px;
+  }
+  #score {
+    left: 295px;
+  }
+}
+
+@media (min-width: 768px) {
+  #alcohol {
+    left: 565px;
+  }
+  #score {
+    left: 500px;
+  }
+}
